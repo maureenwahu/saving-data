@@ -1,13 +1,7 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet"
-          integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
-</head>
-<body>
 
+{% extends 'master.html' %}
+
+{% block content %}
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-sm-4">
@@ -18,17 +12,17 @@
 
                 <div class="mb-3 mt-3">
                     <label for="names" class="form-label">Names:</label>
-                    <input type="names" required class="form-control" id="names" placeholder="Enter names" name="names">
+                    <input type="text" required class="form-control" id="names" placeholder="Enter names" name="names">
                 </div>
 
                 <div class="mb-3 mt-3">
                     <label for="phone" class="form-label">Phone:</label>
-                    <input type="tel" required class="form-control" id="phone" placeholder="Enter phone" name="phone">
+                    <input type="number" required class="form-control" id="phone" placeholder="Enter phone" name="phone">
                 </div>
 
                 <div class="mb-3 mt-3">
                     <label for="email" class="form-label">Email:</label>
-                    <input type="email" required class="form-control" id="email" placeholder="Enter email" name="email">
+                    <input type="text" required class="form-control" id="email" placeholder="Enter email" name="email">
                 </div>
 
                 <div class="mb-3 mt-3">
@@ -38,21 +32,21 @@
 
                 <div class="mb-3 mt-3">
                     <label for="Weight" class="form-label">Weight:</label>
-                    <input type="Weight" required class="form-control" id="Weight" placeholder="Enter Weight"
-                           name="Weight">
+                    <input type="number" required class="form-control" id="Weight" placeholder="Enter Weight"
+                           name="weight">
                 </div>
 
                 <div class="mb-3 mt-3">
                     <label for="Height" class="form-label">Height:</label>
-                    <input type="Height" required class="form-control" id="Height" placeholder="Enter Height"
-                           name="Height">
+                    <input type="number" required class="form-control" id="Height" placeholder="Enter Height"
+                           name="height">
                 </div>
 
                 <p>Select Gender</p>
-                    <input type="radio" class="form-check-input" id="Male" name="optradio" value="Male" checked>Male
+                    <input type="radio" class="form-check-input" id="Male" name="gender" value="Male" checked>Male
                     <label class="form-check-label" for="Male"></label>
 
-                    <input type="radio" class="form-check-input" id="Female" name="optradio" value="Female">Female
+                    <input type="radio" class="form-check-input" id="Female" name="gender" value="Female">Female
                     <label class="form-check-label" for="Female"></label>
 
                 <button class="btn btn-danger w-100">Register</button>
@@ -63,5 +57,5 @@
 </div>
 
 
-</body>
-</html>
+
+{% endblock %}
